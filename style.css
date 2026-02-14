@@ -1,0 +1,182 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* Dark romantic pink gradient */
+  background: linear-gradient(
+    135deg,
+    #2b0f1a,
+    #4a1f33,
+    #6b2e46
+  );
+
+  color: #ffe6ee;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   CENTER LAYOUT
+========================= */
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* =========================
+   GLASS CARD DESIGN
+========================= */
+
+.card {
+  background: rgba(255, 192, 203, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #ff6f91;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4f78;
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+/* =========================
+   MEMORY SECTION
+========================= */
+
+.memory {
+  text-align: center;
+  margin: 40px;
+}
+
+.memory img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+
+/* =========================
+   LOVE CARDS GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.love-card {
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.love-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: rgba(255,255,255,0.15);
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 18px;
+  animation: rise 12s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-110vh) scale(1.5);
+  }
+}
+
+
+/* =========================
+   AUDIO PLAYER STYLE
+========================= */
+
+audio {
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 600px) {
+
+  .card {
+    padding: 25px;
+    margin: 15px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+}
